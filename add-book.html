@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="add-book.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f6f2">
+    <title>Add a Book | My Bookshelf</title>
+</head>
+<body>
+    <main class="page">
+        <a class="back-link" href="index.html">
+            <span aria-hidden="true">&larr;</span>
+            Back to bookshelf
+        </a>
+
+        <section class="form-card" aria-labelledby="page-title">
+            <p class="eyebrow">Grow your collection</p>
+            <h1 id="page-title">Add a book.</h1>
+            <p class="intro">Save a new story to your personal bookshelf.</p>
+
+            <form class="book-form" action="index.html" method="get">
+                <div class="form-field">
+                    <label for="book-title">Title</label>
+                    <input id="book-title" name="title" type="text" placeholder="e.g. The Midnight Library" maxlength="39" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="book-author">Author</label>
+                    <input id="book-author" name="author" type="text" placeholder="e.g. Matt Haig" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="book-status">Status</label>
+                    <select id="book-status" name="status" required>
+                        <option value="to-read">To read</option>
+                        <option value="reading">Reading</option>
+                        <option value="finished">Finished</option>
+                    </select>
+                </div>
+
+                <button class="submit-button" type="submit">Add book</button>
+                <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <script src="add-book.js"></script>
+</body>
+
+</html>

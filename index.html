@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#f7f6f2">
+    <title>My Bookshelf</title>
+</head>
+<body>
+    <main class="page">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="My Bookshelf home">
+                <span class="brand-mark" aria-hidden="true">b</span>
+                <span>my bookshelf</span>
+            </a>
+            <div class="topbar-actions">
+                <div class="library-stats" aria-label="Bookshelf progress" aria-live="polite">
+                    <span id="book-count">0 books</span>
+                    <span><strong id="finished-count">0</strong> finished</span>
+                    <span><strong id="remaining-count">0</strong> left to finish</span>
+                </div>
+                <a class="add-book-link" href="add-book.html">Add a book <span aria-hidden="true">+</span></a>
+            </div>
+        </header>
+
+        <section aria-labelledby="page-title">
+            <div class="heading-row">
+                <div>
+                    <p class="eyebrow">Your personal library</p>
+                    <h1 id="page-title">A shelf of stories.</h1>
+                    <p class="intro">A little corner for the books you’ve read, the ones you’re reading, and the ones still waiting.</p>
+                </div>
+                <p class="shelf-label">All books <span id="shelf-count">00</span></p>
+            </div>
+
+            <div class="search-row">
+                <label class="search-box" for="book-search">
+                    <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false">
+                        <circle cx="8.75" cy="8.75" r="5.75"></circle>
+                        <path d="m13 13 4 4"></path>
+                    </svg>
+                    <input id="book-search" type="search" placeholder="Search by title or author" autocomplete="off">
+                </label>
+                <p class="search-results" id="search-results" aria-live="polite">Showing 0 books</p>
+            </div>
+
+            <p class="library-error" id="library-error" role="alert" hidden></p>
+            <div class="book-grid" aria-label="Book collection">
+            </div>
+            <p class="empty-state">Your bookshelf is empty. Add your first book to get started.</p>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
